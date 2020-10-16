@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejercicios jQuery</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        table {
+            padding: 1em;
+            margin: auto;
+            font-size: 2em;
+        }
+
+        th, td {
+            width: 4em;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input id="orig" />
+        <button id="act_copi">Copiar texto</button>
+        <table>
+            <thead>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p class="copi">Hola</p></td>
+                    <td><p class="copi">Hello</p></td>
+                    <td><p class="copi">Ciao</p></td>
+                </tr>
+                <tr>
+                    <td><p class="copi">Salut</p></td>
+                    <td><p class="copi">Yassou</p></td>
+                    <td><p class="copi">Alô</p></td>
+                </tr>
+                <tr>
+                    <td><p class="copi">Hej</p></td>
+                    <td><p class="copi">Ni hao</p></td>
+                    <td><p class="copi">Namaste</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $("#act_copi").click(function () {
+            var textoOrig = $("#orig").val();
+            console.log(textoOrig);
+            $(".copi").append(" " + textoOrig);
+        });
+    </script>
+
+
+</body>
+</html>

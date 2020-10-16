@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejercicios jQuery</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .circulo {
+            width: 100px;
+            height: 100px;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            background:#4cff00;
+        }
+
+        .ponerRojo {
+            width: 100px;
+            height: 100px;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            background: #ff0000;
+        }
+
+        .botones{
+            margin-top: 2em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+    </div>
+
+    <div class="botones">
+        <button id="rojo">Poner ROJO</button>
+        <button id="quita">Quitar ROJO</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $("#rojo").click(function () {
+            console.log("click");
+            $("div.circulo").addClass("ponerRojo");
+        });
+
+        $("#quita").click(function () {
+            console.log("click");
+            $("div.circulo").removeClass("ponerRojo");
+        });
+    </script>
+
+
+</body>
+</html>

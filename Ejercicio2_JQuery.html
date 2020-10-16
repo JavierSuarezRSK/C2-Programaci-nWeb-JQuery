@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejercicios jQuery</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+        .container{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input id="orig"/>
+        <button id="act_copi">Copiar texto</button>
+        <input id="copia" disabled />
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $("#act_copi").click(function () {
+            var textoOrig = $("#orig").val();
+            console.log(textoOrig);
+            $("#copia").val(textoOrig);
+        });
+    </script>
+
+
+</body>
+</html>

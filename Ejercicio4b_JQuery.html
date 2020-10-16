@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejercicios jQuery</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        input {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        button {
+            width: 3em;
+            height: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="resta">-</button>
+        <input id="cuenta" disabled value="0" />
+        <button id="suma">+</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $("#resta").click(function () {
+            var cuentaActual = $("#cuenta").val();
+            if (cuentaActual == 0) {
+
+            } else {
+                console.log(cuentaActual);
+                cuentaActual--;
+                $("#cuenta").val(cuentaActual);
+            }
+            
+        });
+
+        $("#suma").click(function () {
+            var cuentaActual = $("#cuenta").val();
+            if (cuentaActual == 10) {
+
+            } else {
+                console.log(cuentaActual);
+                cuentaActual++;
+                $("#cuenta").val(cuentaActual);
+            }
+            
+        });
+
+    </script>
+
+
+</body>
+</html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
