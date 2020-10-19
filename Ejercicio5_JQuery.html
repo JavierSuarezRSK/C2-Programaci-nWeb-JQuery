@@ -17,13 +17,13 @@
     <div class="container">
         <nav aria-label="Page navigation example">
             <ul class="pagination">
-                <li><a id="atras" class="page-link" href="">«</a></li>
-                <li><a class="page-link nums" href="Ejercicio1_JQuery.html">1</a></li>
-                <li><a class="page-link nums" href="Ejercicio1b_JQuery.html">2</a></li>
-                <li><a class="page-link nums" href="Ejercicio2_JQuery.html">3</a></li>
-                <li><a class="page-link nums" href="Ejercicio3_JQuery.html">4</a></li>
-                <li><a class="page-link nums" href="Ejercicio3b_JQuery.html">5</a></li>
-                <li><a id="adelante" class="page-link" href="">»</a></li>
+                <li><a id="atras" class="page-link" href="#">«</a></li>
+                <li><a class="page-link nums" href="p1">1</a></li>
+                <li><a class="page-link nums" href="p2">2</a></li>
+                <li><a class="page-link nums" href="p3">3</a></li>
+                <li><a class="page-link nums" href="p4">4</a></li>
+                <li><a class="page-link nums" href="p5">5</a></li>
+                <li><a id="adelante" class="page-link" href="##">»</a></li>
             </ul>
         </nav>
     </div>
@@ -32,7 +32,15 @@
     <script type="text/javascript">
         $("#atras").click(function () {
             console.log("h");
-            var arrayNumeros = $(".nums").text();
+
+            var arrayNumeros = new Array(5).fill(0);
+
+            let j = 0;
+            $('.nums').each(function () {
+                arrayNumeros[j] = $(this).text();
+                j++;
+            });
+
             console.log(arrayNumeros);
             var arrayNumerosbis = new Array(5).fill(0);
 
@@ -40,6 +48,19 @@
 
             } else if (arrayNumeros[4] == "1") {
 
+                for (i = 0; i < 4; i++) {
+                    console.log("H: " + arrayNumeros[i]);
+                    arrayNumerosbis[i] = parseInt(arrayNumeros[i]) - 5;
+                }
+
+                arrayNumerosbis[4] = parseInt(10) - 5;
+
+                let j = 0;
+                $('.nums').each(function () {
+                    $(this).text(arrayNumerosbis[j]);
+                    $(this).attr("href", "p" + arrayNumerosbis[j]);
+                    j++;
+                });
 
             } else {
                 for (i = 0; i < 5; i++) {
@@ -50,6 +71,7 @@
                 let j = 0;
                 $('.nums').each(function () {
                     $(this).text(arrayNumerosbis[j]);
+                    $(this).attr("href", "p" +arrayNumerosbis[j]);
                     j++;
                 });
             }
@@ -58,11 +80,20 @@
         });
 
         $("#adelante").click(function () {
-            var arrayNumeros = $(".nums").text();
-            console.log(arrayNumeros);
+
+            var arrayNumeros = new Array(5).fill(0);
+
+            let j = 0;
+            $('.nums').each(function () {
+                arrayNumeros[j] = $(this).text();
+                j++;
+            });
+
+            
+
             var arrayNumerosbis = new Array(5).fill(0);
 
-            if (arrayNumeros[0] == "1") {
+            if (arrayNumeros[4] != "20") {
                 for (i = 0; i < 5; i++) {
                     console.log("H: " + arrayNumeros[i]);
                     arrayNumerosbis[i] = parseInt(arrayNumeros[i]) + 5;
@@ -71,6 +102,7 @@
                 let j = 0;
                 $('.nums').each(function () {
                     $(this).text(arrayNumerosbis[j]);
+                    $(this).attr("href", "p" +arrayNumerosbis[j]);
                     j++;
                 });
 
@@ -79,6 +111,9 @@
             }
         });
 
+        $("#nums").click(function () {
+            alert("Has clicado al numero = " + this.text());
+        });
     </script>
 
 
