@@ -52,14 +52,17 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
+
+        //CAMBIO TODO A ROJO
         $("#rojo").click(function () {
             console.log("click");
-            $("div.circulo").addClass("ponerRojo");
+            $("div.circulo").addClass("ponerRojo"); //AÑADE LA CLAS "ponerRojo" que tiene un componente css que cambia de color
         });
 
+        //VUELVE A DEJARLO IGUAL
         $("#quita").click(function () {
             console.log("click");
-            $("div.circulo").removeClass("ponerRojo");
+            $("div.circulo").removeClass("ponerRojo"); //BORRAMOS LA CLASE QUE DA COLOR
         });
     </script>
 

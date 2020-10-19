@@ -31,8 +31,12 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
+
+        //BOTON DE RESTA
         $("#resta").click(function () {
             var cuentaActual = $("#cuenta").val();
+
+            //NO FUNCIONA SI ES MENOR DE 0, PUES NO PERMITIMOS NUMEROS NEGATIVOS
             if (cuentaActual == 0) {
 
             } else {
@@ -43,8 +47,11 @@
             
         });
 
+        //BOTON SUMA
         $("#suma").click(function () {
             var cuentaActual = $("#cuenta").val();
+
+            //NO FUNCIONA SI ES MAYOR DE 10, PUES NO PERMITIMOS VALORES SUPERIORES
             if (cuentaActual == 10) {
 
             } else {

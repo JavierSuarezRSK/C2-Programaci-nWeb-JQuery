@@ -30,9 +30,12 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
-        $("#atras").click(function () {
-            console.log("h");
 
+        //AL HACER CLICK ATRAS
+
+        $("#atras").click(function () {
+
+            //CREAMOS UN ARRAY PARA RECOGER LOS NUMEROS CON EL FOR EACH DE ABAJO
             var arrayNumeros = new Array(5).fill(0);
 
             let j = 0;
@@ -41,26 +44,12 @@
                 j++;
             });
 
-            console.log(arrayNumeros);
             var arrayNumerosbis = new Array(5).fill(0);
 
+            // SI EL NUMERO MÁS BAJO ES 1, HACEMOS QUE NO SE PUEDA CAMBIAR
+
+            //EN EL ELSE GENERAMOS LOS NUEVOS NUMEROS CON UN ARRAY COMPLEMENTARIO
             if (arrayNumeros[0] == "1") {
-
-            } else if (arrayNumeros[4] == "1") {
-
-                for (i = 0; i < 4; i++) {
-                    console.log("H: " + arrayNumeros[i]);
-                    arrayNumerosbis[i] = parseInt(arrayNumeros[i]) - 5;
-                }
-
-                arrayNumerosbis[4] = parseInt(10) - 5;
-
-                let j = 0;
-                $('.nums').each(function () {
-                    $(this).text(arrayNumerosbis[j]);
-                    $(this).attr("href", "p" + arrayNumerosbis[j]);
-                    j++;
-                });
 
             } else {
                 for (i = 0; i < 5; i++) {
@@ -79,6 +68,7 @@
 
         });
 
+        //LO MISMO DE LA FUNCIÓN DE ATRA PERO DE SUMA.
         $("#adelante").click(function () {
 
             var arrayNumeros = new Array(5).fill(0);
@@ -93,6 +83,7 @@
 
             var arrayNumerosbis = new Array(5).fill(0);
 
+            //SI EL ELEMENTO MAXIMO NO ES 20, PODEMOS ACTUAR.
             if (arrayNumeros[4] != "20") {
                 for (i = 0; i < 5; i++) {
                     console.log("H: " + arrayNumeros[i]);
@@ -111,6 +102,7 @@
             }
         });
 
+        //UN ALERT PARA LOS NUMEROS
         $("#nums").click(function () {
             alert("Has clicado al numero = " + this.text());
         });
